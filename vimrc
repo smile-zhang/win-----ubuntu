@@ -1,4 +1,23 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+ 
+" set the runtime path to include Vundle and initialize
 runtime! debian.vim
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+ 
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'vim-scripts/indentpython.vim' 
+Plugin 'vim-syntastic/syntastic'
+Plugin 'altercation/vim-colors-solarized'
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+"set background=light or dark 
+set background=light 
+"set colorscheme solarized
 "set compatible
 
 "syntax 语法高亮
