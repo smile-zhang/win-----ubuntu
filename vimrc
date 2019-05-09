@@ -11,13 +11,27 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-scripts/indentpython.vim' 
 Plugin 'vim-syntastic/syntastic'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'scrooloose/nerdtree' "vim 添加树形目录
+Plugin 'Xuyuanp/nerdtree-git-plugin' "vim的git支持
+Plugin 'jistr/vim-nerdtree-tabs' "tab键支持
+Plugin 'Lokaltog/vim-powerline'  "美化状态栏，可以显示当前的虚拟环境git分支，正在编辑的文件等信息
+Plugin 'Yggdroot/indentLine'  "缩进指示线   
+Plugin 'jiangmiao/auto-pairs'   "自动补全括号和引号
+Plugin 'kine/ctrlp.vim'   "ctrl+p 搜索文件
+Plugin 'tpope/vim-fugitive'  "git集成插件
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
+call vundle#end()            " 插件引用完成
 filetype plugin indent on    " required
 
+
+
+nnoremap <Leader>il :IndentLinesToggle<CR>
+let g:indentLine_enabled = 1 "使缩进线插件生效
+let g:indentLine_clar='┆' "指定缩进线符号
 "set background=light or dark 
-set background=light 
-"set colorscheme solarized
+set background=dark 
+"colorscheme murphy 比较喜欢的一个配色
+colorscheme  murphy
 "set compatible
 
 "syntax 语法高亮
